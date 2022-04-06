@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-color: #F2D8A7
+}
+
+#grid-container{
+    display: grid;
+
+    grid-template-areas: 
+    "header header header header"
+    "section-1 section-1 section-1 section-1"
+    "section-2 section-2 section-3 section-3"
+    "section-2 section-2 section-3 section-3"
+    "section-4 section-4 section-4 section-4"
+    "footer footer footer footer";
+
+    grid-template-columns: auto auto auto auto;
+
+    grid-template-rows: 15rem auto auto auto auto auto;
+
+}
+
+/*HEADER*/
+.header{
+    grid-area: header;
+    background: #F2D6BD;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 15rem;
+    height: 15rem;
+}
+
+.menu-icon{
+    display: none;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav{
+    padding-left: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.nav ul li a:hover{
+    background: #f0c8a5;
+}
+
+.nav ul ul{
+
+    position: absolute;
+    display: none; 
+
+}
+
+.nav ul li:hover ul {
+    display:block;
+ }
+
+ .nav ul li:hover ul a:hover {
+    background-color: #f0c8a5;
+  }
+
+.nav ul ul li { 
+
+    background-color: #F2D6BD;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+/*FIN HEADER*/
+
+
+/*MAIN*/
+
+.section-1{
+    grid-area: section-1;
+}
+
+.section-1 img{ 
+    width: 100%;
+    height: 500px;
+}
+
+.section-2{
+    grid-area: section-2;
+    display: inline;
+    padding: 50px 50px 20px 50px;
+}
+
+.section-2 .div-cabana-1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.section-2 .div-cabana-1 img{
+    padding: 5px;
+    width: 250px;
+    height: 200px;
+}
+
+.section-2 .div-comodidades{
+    padding: 50px;
+}
+
+.section-2 .div-mapa iframe{
+    width: 600px;
+    height: 500px;
+}
+
+.div-ubicación{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-ubicación div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.div-ubicación img{
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+}
+
+.section-3{
+    grid-area: section-3;
+    display: inline;
+    padding: 50px 50px 20px 50px;
+}
+
+.section-3 .div-video iframe{
+    width: 600px;
+    height: 400px;
+    padding: 50px;
+}
+
+.section-3 .div-cabana-2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.section-3 .div-cabana-2 img{
+    padding: 5px;
+    width: 250px;
+    height: 200px;
+}
+
+.section-3 .div-servicios{
+    padding: 50px;
+}
+
+
+.section-4{
+    grid-area: section-4;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.section-4 .div-fotos{
+    padding: 10px 20px 10px 50px;
+}
+
+.section-4 .div-fotos img{   
+    width: 250px;
+    height: 200px;
+}
+
+#cabana-1{
+    display: inline;
+ 
+    padding: 20px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+#cabana-2{
+    display: inline;
+ 
+    padding: 20px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+/*FORMULARIO*/
+.formulario-contacto{
+
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    
+    background-color: var(--color-fondo);
+    font-family: sans-serif;
+    font-size: medium;
+    color: black;
+}
+
+form {
+
+    width: 600px;
+
+    padding: 1em;
+}
+
+ form div {
+    margin-top: 1em;
+}
+
+label {
+
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    text-align: right;
+
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.formulario-contacto input,
+textarea {
+
+  font: 1em sans-serif;
+  width: 400px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+
+}
+
+input:focus, textarea:focus {
+
+    border-color: #000;
+
+}
+
+textarea {
+
+    vertical-align: top;
+  
+    height: 15rem;
+
+    padding: 1rem;
+
+}
+
+.formulario-contacto-consulta{
+
+    padding-bottom: 2rem;
+
+}
+
+.formulario-contacto-enviar{
+
+    display: inline;
+    padding-top: 5rem;
+    padding-left: 165px;
+
+}
+
+.formulario-contacto #enviar{
+    
+    width: 175px;
+    height: 25px;
+    text-align: center;
+
+}
+
+.formulario-contacto #limpiar-formulario{
+
+    width: 175px;
+    height: 25px;
+    text-align: center;
+}
+/*FIN FORMULARIO*/
+/*FIN MAIN*/
+
+/*FOOTER*/
+.footer{
+    grid-area: footer;
+    width: 100%;
+    background-color: #0a141d;
+}
+
+.footer .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 180px;
+
+}
+
+.footer .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.footer .grupo-1 .red-solcial a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .grupo-1 .red-solcial a:hover{
+    color: #f0c8a5;
+}
+
+.footer .grupo-1 .contacto a{
+    display: block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+footer .grupo-1 .contacto{
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+}
+
+.footer .grupo-1 .contacto a:hover{
+    color: #f0c8a5;
+}
+
+.footer .grupo-1 .contacto p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+footer .grupo-1 .contacto h3{
+    color: white;
+    font-size: 16px;
+}
+
+.footer .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer .grupo-2 small{
+    font-size: 15px;
+}
+/*FIN FOOTER*/
+
+
+/*MEDIA*/
+@media only screen and (max-width: 768px) {
+
+    #grid-container{
+        grid-template-areas: 
+        "header header"
+        "section-1 section-1"
+        "section-2 section-2"
+        "section-3 section-3"
+        "section-4 section-4"
+        "footer footer";
+
+        grid-template-columns: auto auto;
+
+        grid-template-rows: 15rem auto auto auto auto auto;
+
+    }
+
+    .logo{
+        height: 275px;;
+    }
+
+    .section-1 img{ 
+        width: 100%;
+        height: 400px;
+    }
+    .section-2{
+        display: inline-block;
+        padding: 10px 0 0 50px;
+    }
+
+    .section-2 .div-comodidades{
+        padding: 10px 0 0 50px;
+    }
+    .section-2 .div-mapa iframe{
+        width: 550px;
+        height: 450px;
+    }
+
+    .section-3{
+        display: inline-block;
+        padding: 10px 0 0 50px;
+    }
+
+    .section-3 .div-servicios{
+        padding: 10px 0 0 50px;
+    }
+
+    .nav ul li {
+        display: block;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    #grid-container{
+        grid-template-areas: 
+        "header"
+        "section-1"
+        "section-2"
+        "section-3"
+        "section-4"
+        "footer";
+
+        grid-template-columns: auto;
+
+        grid-template-rows: 15rem auto auto auto auto auto;
+    }
+
+    .logo{
+        height: 275px;;
+    }
+
+    .section-1 img{ 
+       width: 100%;
+      height: 300px;
+    }
+
+    .section-2{
+        display: block;
+        padding: 10px 0 0 20px;
+    }
+
+    .section-2 .div-comodidades{
+        padding: 10px 0 0 20px;
+    }
+
+    .section-2 .div-mapa iframe{
+        width: 550px;
+        height: 450px;
+    }
+
+    .section-3{
+        display: block;
+        padding: 10px 0 0 20px;
+    }
+
+    .section-3 .div-servicios{
+        padding: 10px 0 0 20px;
+    }
+
+    .logo-nav-container{
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .nav ul li {
+        display: block;
+    }
+
+ 
+}
+/*FIN MEDIA*/
