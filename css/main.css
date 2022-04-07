@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -31,7 +35,8 @@ body{
 /*HEADER*/
 .header{
     grid-area: header;
-    background: #F2D6BD;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    /*background: #F2D6BD;*/
     position: fixed;
     left: 0;
     top: 0;
@@ -49,9 +54,12 @@ body{
 }
 
 .logo{
-    width: 15rem;
+    width: 12rem;
     height: 15rem;
+
+    transform: skewX(5deg);
 }
+
 
 .menu-icon{
     display: none;
@@ -121,6 +129,44 @@ body{
 .section-1{
     grid-area: section-1;
 }
+
+.div-bienvenidos{
+    color: white;
+    font-size: xx-large;
+    display: inline;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(221, 138, 14);
+    animation-name: animacion;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+} 
+
+@keyframes animacion {
+    0% {
+        width: 100px;
+        color: rgb(228, 226, 120);
+    }
+    25% {
+        width: 300px;
+    }
+    50% {
+        width: 200px;
+        background-color: rgb(255, 254, 250);
+    }
+    75% {
+        width: 300px;
+    }
+    100% {
+        width: 200px;
+        background-color:rgb(128, 19, 0);
+        color: rgb(255, 0, 21);
+    }
+ }
+
 
 .section-1 img{ 
     width: 100%;
@@ -221,11 +267,12 @@ body{
     height: 200px;
 }
 
+
 #cabana-1{
     display: inline;
  
-    padding: 20px;
-    position: relative;
+    padding: 250px 20px 20px 0;
+    position: sticky;
     width: 300px;
     height: 200px;
 }
@@ -233,8 +280,8 @@ body{
 #cabana-2{
     display: inline;
  
-    padding: 20px;
-    position: relative;
+    padding: 250px 20px 20px 0;
+    position: sticky;
     width: 300px;
     height: 200px;
 }
@@ -365,6 +412,11 @@ textarea {
 
 }
 
+.img-logo{
+
+    transform: rotate(5deg);
+}
+
 .footer .grupo-1 .box h2{
     color: white;
     margin-bottom: 25px;
@@ -381,7 +433,7 @@ textarea {
     margin-right: 10px;
     background-color: #0d2033;
     text-align: center;
-    transition: all 300ms ease;
+    transition: all 0.4s ease;
 }
 
 .footer .grupo-1 .red-solcial a:hover{
@@ -398,7 +450,7 @@ textarea {
     margin-right: 10px;
     background-color: #0d2033;
     text-align: center;
-    transition: all 300ms ease;
+    transition: all 0.4s ease;
 }
 
 footer .grupo-1 .contacto{
@@ -457,6 +509,9 @@ footer .grupo-1 .contacto h3{
         height: 275px;;
     }
 
+    .section-1{
+        padding-top: 30px;
+    }
     .section-1 img{ 
         width: 100%;
         height: 400px;
@@ -485,6 +540,11 @@ footer .grupo-1 .contacto h3{
 
     .nav ul li {
         display: block;
+    }
+
+    .img-logo{
+
+        transform: rotate(360deg);
     }
 
 
