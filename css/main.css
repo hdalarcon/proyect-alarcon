@@ -37,7 +37,7 @@ body{
     grid-area: header;
     background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
     /*background: #F2D6BD;*/
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     top: 0;
     width: 100%;
@@ -225,11 +225,6 @@ body{
     padding: 50px 50px 20px 50px;
 }
 
-.section-3 .div-video iframe{
-    width: 600px;
-    height: 400px;
-    padding: 50px;
-}
 
 .section-3 .div-cabana-2{
     display: flex;
@@ -249,14 +244,14 @@ body{
 }
 
 
-.section-4{
+/*.section-4{
     grid-area: section-4;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-}
+}*/
 
 .section-4 .div-fotos{
     padding: 10px 20px 10px 50px;
@@ -385,21 +380,23 @@ textarea {
 .footer{
     grid-area: footer;
     width: 100%;
-    background-color: #0a141d;
+    margin: 0;
 }
 
-.footer .grupo-1{
+.grupo-1{
     width: 100%;
     max-width: 1200px;
-    margin: auto;
-
+    margin: 0;
+  
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
     padding: 45px 0px;
 }
 
-.footer .grupo-1 .box figure{
+
+
+.grupo-1 .box figure{
     width: 100%;
     height: 100%;
     display: flex;
@@ -407,7 +404,7 @@ textarea {
     align-items: center;
 }
 
-.footer .grupo-1 .box figure img{
+.box figure img{
     width: 180px;
 
 }
@@ -417,13 +414,15 @@ textarea {
     transform: rotate(5deg);
 }
 
-.footer .grupo-1 .box h2{
+.box h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
 }
 
-.footer .grupo-1 .red-solcial a{
+
+
+.red-solcial a{
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -436,11 +435,22 @@ textarea {
     transition: all 0.4s ease;
 }
 
-.footer .grupo-1 .red-solcial a:hover{
+.red-solcial a:hover{
     color: #f0c8a5;
 }
 
-.footer .grupo-1 .contacto a{
+.footer{
+    background-color: #0a141d;
+}
+
+.contacto{
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+}
+
+.contacto a{
     display: block;
     text-decoration: none;
     width: 45px;
@@ -453,35 +463,28 @@ textarea {
     transition: all 0.4s ease;
 }
 
-footer .grupo-1 .contacto{
-    display: grid;
-    grid-template-columns: 50px auto;
-    grid-template-rows: auto auto auto;
-    align-items: center;
-}
-
-.footer .grupo-1 .contacto a:hover{
+.contacto a:hover{
     color: #f0c8a5;
 }
 
-.footer .grupo-1 .contacto p{
+.contacto p{
     color: white;
     font-size: 1.5rem;
 }
 
-footer .grupo-1 .contacto h3{
+.contacto h3{
     color: white;
     font-size: 16px;
 }
 
-.footer .grupo-2{
+.grupo-2{
     background-color: #0a1a2a;
     padding: 15px 10px;
     text-align: center;
     color: white;
 }
 
-.footer .grupo-2 small{
+.grupo-2 small{
     font-size: 15px;
 }
 /*FIN FOOTER*/
@@ -509,16 +512,16 @@ footer .grupo-1 .contacto h3{
         height: 275px;;
     }
 
-    .section-1{
+    /*.section-1{
         padding-top: 30px;
-    }
+    }*/
     .section-1 img{ 
         width: 100%;
         height: 400px;
     }
     .section-2{
         display: inline-block;
-        padding: 10px 0 0 50px;
+        padding: 10px 15px 10px 15px;
     }
 
     .section-2 .div-comodidades{
@@ -531,7 +534,7 @@ footer .grupo-1 .contacto h3{
 
     .section-3{
         display: inline-block;
-        padding: 10px 0 0 50px;
+        padding: 10px 15px 10px 10px;
     }
 
     .section-3 .div-servicios{
@@ -578,7 +581,7 @@ footer .grupo-1 .contacto h3{
 
     .section-2{
         display: block;
-        padding: 10px 0 0 20px;
+        padding: 10px 15px 10px 15px;
     }
 
     .section-2 .div-comodidades{
@@ -592,7 +595,7 @@ footer .grupo-1 .contacto h3{
 
     .section-3{
         display: block;
-        padding: 10px 0 0 20px;
+        padding: 10px 15px 10px 15px;
     }
 
     .section-3 .div-servicios{
@@ -606,6 +609,14 @@ footer .grupo-1 .contacto h3{
 
     .nav ul li {
         display: block;
+    }
+
+    .contacto{
+        display: block;
+    }
+
+    .section-4 .div-fotos{
+        padding: 10px px 10px 15px;
     }
 
  
