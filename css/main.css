@@ -11,33 +11,14 @@ html{
 
 body{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: #F2D8A7
 }
 
-#grid-container{
-    display: grid;
-
-    grid-template-areas: 
-    "header header header header"
-    "section-1 section-1 section-1 section-1"
-    "section-2 section-2 section-3 section-3"
-    "section-2 section-2 section-3 section-3"
-    "section-4 section-4 section-4 section-4"
-    "footer footer footer footer";
-
-    grid-template-columns: auto auto auto auto;
-
-    grid-template-rows: 15rem auto auto auto auto auto;
-
-}
-
 /*HEADER*/
+
 .header{
-    grid-area: header;
-    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
-    /*background: #F2D6BD;*/
-    /*position: fixed;*/
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%)!important;
     left: 0;
     top: 0;
     width: 100%;
@@ -53,86 +34,44 @@ body{
     margin: 0 auto;
 }
 
-.logo{
-    width: 12rem;
-    height: 15rem;
+.navbar-nav .nav-link{
+    color: white !important;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+/*
+.row .header .navbar .navbar-brand img:hover {
+    filter: grayscale(90%);
+}*/
 
-    transform: skewX(5deg);
+.row .footer-logo img:hover{
+    filter: grayscale(90%);
 }
 
 
-.menu-icon{
-    display: none;
-}
 
-.logo-nav-container{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-wrap: nowrap;
+.dropdown-menu{
+    background-color: #fc9105;
 }
-
-.nav{
-    padding-left: 5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-}
-
-.nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav ul li{
-    display: inline-block;
-}
-
-.nav ul li a{
-    display: block;
+.dropdown a:hover{
+    background: #f0c8a5;
     padding: 0.5rem 1rem;
     transition: all 0.4s linear;
     border-radius: 5px;
 }
 
-.nav ul li a:hover{
+.nav-item a:hover{
     background: #f0c8a5;
 }
 
-.nav ul ul{
-
-    position: absolute;
-    display: none; 
-
-}
-
-.nav ul li:hover ul {
-    display:block;
- }
-
- .nav ul li:hover ul a:hover {
-    background-color: #f0c8a5;
-  }
-
-.nav ul ul li { 
-
-    background-color: #F2D6BD;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
 /*FIN HEADER*/
 
 
 /*MAIN*/
 
-.section-1{
-    grid-area: section-1;
-}
-
 .div-bienvenidos{
     color: white;
-    font-size: xx-large;
     display: inline;
     text-align: center;
     width: 100px;
@@ -144,6 +83,10 @@ body{
     animation-duration: 4s;
     animation-delay: 0.5s;
 } 
+
+.div-bienvenidos h1{
+    font-family: 'Montserrat', sans-serif;
+}
 
 @keyframes animacion {
     0% {
@@ -170,11 +113,10 @@ body{
 
 .section-1 img{ 
     width: 100%;
-    height: 500px;
+    height: 450px;
 }
 
 .section-2{
-    grid-area: section-2;
     display: inline;
     padding: 50px 50px 20px 50px;
 }
@@ -187,7 +129,6 @@ body{
 }
 
 .section-2 .div-cabana-1 img{
-    padding: 5px;
     width: 250px;
     height: 200px;
 }
@@ -209,18 +150,20 @@ body{
 .div-ubicación div{
     display: flex;
     flex-direction: row;
-    align-items: center;
     font-size: 1rem;
 }
 
 .div-ubicación img{
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     padding: 5px;
 }
 
+.div-ubicación p{
+    margin-top: 10px;
+}
+
 .section-3{
-    grid-area: section-3;
     display: inline;
     padding: 50px 50px 20px 50px;
 }
@@ -234,7 +177,6 @@ body{
 }
 
 .section-3 .div-cabana-2 img{
-    padding: 5px;
     width: 250px;
     height: 200px;
 }
@@ -243,15 +185,12 @@ body{
     padding: 50px;
 }
 
-
-/*.section-4{
-    grid-area: section-4;
-
+.section-4{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-}*/
+}
 
 .section-4 .div-fotos{
     padding: 10px 20px 10px 50px;
@@ -263,122 +202,10 @@ body{
 }
 
 
-#cabana-1{
-    display: inline;
- 
-    padding: 250px 20px 20px 0;
-    position: sticky;
-    width: 300px;
-    height: 200px;
-}
-
-#cabana-2{
-    display: inline;
- 
-    padding: 250px 20px 20px 0;
-    position: sticky;
-    width: 300px;
-    height: 200px;
-}
-
-/*FORMULARIO*/
-/*.formulario-contacto{
-
-    padding-top: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    
-    background-color: var(--color-fondo);
-    font-family: sans-serif;
-    font-size: medium;
-    color: black;
-}
-
-form {
-
-    width: 600px;
-
-    padding: 1em;
-}
-
- form div {
-    margin-top: 1em;
-}
-
-label {
-
-    display: inline-block;
-    width: 150px;
-    height: 25px;
-    text-align: right;
-
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-}
-
-.formulario-contacto input,
-textarea {
-
-  font: 1em sans-serif;
-  width: 400px;
-  height: 25px;
-  box-sizing: border-box;
-  border: 1px solid #999;
-
-}
-
-input:focus, textarea:focus {
-
-    border-color: #000;
-
-}
-
-textarea {
-
-    vertical-align: top;
-  
-    height: 15rem;
-
-    padding: 1rem;
-
-}
-
-.formulario-contacto-consulta{
-
-    padding-bottom: 2rem;
-
-}
-
-.formulario-contacto-enviar{
-
-    display: inline;
-    padding-top: 5rem;
-    padding-left: 165px;
-
-}
-
-.formulario-contacto #enviar{
-    
-    width: 175px;
-    height: 25px;
-    text-align: center;
-
-}
-
-.formulario-contacto #limpiar-formulario{
-
-    width: 175px;
-    height: 25px;
-    text-align: center;
-}*/
-/*FIN FORMULARIO*/
 /*FIN MAIN*/
 
 /*FOOTER*/
 .footer{
-    grid-area: footer;
     width: 100%;
     margin: 0;
 }
@@ -396,47 +223,14 @@ textarea {
 
 
 
-.grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box figure img{
-    width: 180px;
-
-}
-
-.img-logo{
-
-    transform: rotate(5deg);
-}
-
 .box h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
 }
 
-
-
-.red-solcial a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: white;
-    margin-right: 10px;
-    background-color: #0d2033;
-    text-align: center;
-    transition: all 0.4s ease;
-}
-
-.red-solcial a:hover{
-    color: #f0c8a5;
+.box i:hover{
+    transform: rotate(0.5turn);
 }
 
 .footer{
@@ -463,9 +257,10 @@ textarea {
     transition: all 0.4s ease;
 }
 
-.contacto a:hover{
+.box a:hover{
     color: #f0c8a5;
 }
+
 
 .contacto p{
     color: white;
@@ -493,36 +288,16 @@ textarea {
 /*MEDIA*/
 @media only screen and (max-width: 768px) {
 
-    #grid-container{
-        grid-template-areas: 
-        "header header"
-        "section-1 section-1"
-        "section-2 section-2"
-        "section-3 section-3"
-        "section-4 section-4"
-        "footer footer";
-
-        grid-template-columns: auto auto;
-
-        grid-template-rows: 15rem auto auto auto auto auto;
-
-    }
-
-    .logo{
-        height: 275px;;
-    }
-
-    /*.section-1{
-        padding-top: 30px;
-    }*/
     .section-1 img{ 
         width: 100%;
-        height: 400px;
-    }
+       height: 350px;
+     }
+
     .section-2{
         display: inline-block;
         padding: 10px 15px 10px 15px;
     }
+
 
     .section-2 .div-comodidades{
         padding: 10px 0 0 50px;
@@ -541,14 +316,6 @@ textarea {
         padding: 10px 0 0 50px;
     }
 
-    .nav ul li {
-        display: block;
-    }
-
-    .img-logo{
-
-        transform: rotate(360deg);
-    }
 
 
 }
@@ -556,27 +323,9 @@ textarea {
 
 @media only screen and (max-width: 480px) {
 
-    #grid-container{
-        grid-template-areas: 
-        "header"
-        "section-1"
-        "section-2"
-        "section-3"
-        "section-4"
-        "footer";
-
-        grid-template-columns: auto;
-
-        grid-template-rows: 15rem auto auto auto auto auto;
-    }
-
-    .logo{
-        height: 275px;;
-    }
-
     .section-1 img{ 
        width: 100%;
-      height: 300px;
+      height: 200px;
     }
 
     .section-2{
@@ -585,13 +334,40 @@ textarea {
     }
 
     .section-2 .div-comodidades{
-        padding: 10px 0 0 20px;
+        width: 100%;
+        padding: 10px 20px 0 20px;
     }
 
-    .section-2 .div-mapa iframe{
-        width: 550px;
-        height: 450px;
+    .section-2 .div-comodidades h2{
+        font-size: 1rem;
     }
+
+    .section-2 .div-comodidades li{
+        font-size: 0.75rem;
+    }
+    .section-2 .div-bienvenido p{
+        font-size: 0.75rem;
+    }
+
+    .section-2 .div-cabana-1 img{
+        width: 200px;
+        height: 150px;
+    }
+
+    .div-ubicación div{
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+    }
+
+    .section-3 .div-servicios h2{
+        font-size: 1rem;
+    }
+
+    .section-3 .div-servicios li{
+        font-size: 0.75rem;
+    }
+
 
     .section-3{
         display: block;
@@ -601,6 +377,12 @@ textarea {
     .section-3 .div-servicios{
         padding: 10px 0 0 20px;
     }
+
+    .section-3 .div-cabana-2 img{
+        width: 200px;
+        height: 150px;
+    }
+
 
     .logo-nav-container{
         align-items: center;
@@ -616,8 +398,19 @@ textarea {
     }
 
     .section-4 .div-fotos{
-        padding: 10px px 10px 15px;
+        padding: 10px 10px 10px 15px;
     }
+
+    .section-4 .div-fotos img {
+        width: 200px;
+        height: 150px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    
 
  
 }

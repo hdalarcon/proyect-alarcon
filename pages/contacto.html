@@ -15,159 +15,166 @@
 </head>
 <body>
     <div class="container-fluid">
-        <!--Header-->
+
+        <!--New header-->    
         <div class="row">
             <header class="header">
-                <div class="container logo-nav-container">
-    
-                    <img class="logo" src="../assets/logo/Logo.png" alt="">
-                
-                    <nav class="nav">
-    
-                        <ul>
         
-                            <li><a href="../indext.html">Home</a></li>
-            
-                            <li><a href="servicios.html">Servicios</a></li>
-            
-                            <li><a href="cabanas.html">Cabañas</a>
-                    
-                                <ul>
-                                    <li><a href="cabanas.html#cabana-1">Cabaña 1</a></li>
-                                    <li><a href="cabanas.html#cabana-2">Cabaña 2</a></li>
-                                </ul>
-                    
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"><img src="../assets/logo/Logo.png" class="img-thumbnail" width="200" height="200" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                               <a class="nav-link" href="../indext.html">Home <span class="sr-only">(current)</span></a>
                             </li>
-            
-                            <li><a href="contacto.html">Contacto</a></li>
-            
-                            <li><a href="ubicacion.html">Ubicación</a></li>
-            
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="cabanas.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">Cabañas</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="cabanas.html#cabana-1">Cabaña 1</a>
+                                    <a class="dropdown-item" href="cabanas.html#cabana-2">Cabaña 2</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                               <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ubicacion.html">Ubicación</a>
+                            </li>
                         </ul>
-    
-                    </nav>
-       
-                </div>
+                    </div>
+                </nav>
+        
             </header>
-        </div>         
-
-        <!--Main
-        <main class="main main-contacto">-->
-        <div class="row">  
-            <div class="section-1 col-sm-12 col-md-12">
-
-                <div class="div-imagen">
-                    <img src="../assets/img/imgContacto.jpg" alt="img contacto">
-                </div>
-
-            </div>
-        </div>  
-
-        <div class="row">
-            
-            <div class="section-2 col-sm-12 col-md-6 col-lg-6">
-                <!-- apertura titulo -->
-		        <div class="row paddingT centrar">
-			        <div class="col-lg-12 col-xs-12" data-aos="fade-up">
-				        <h1 class="fontStyle">Formulario de contacto</h1>
-			        </div>
-		        </div>
-		        <!-- cierre titulo -->
-
-                <!--Formulario-->
-                <form action="#" method="post">
-
-                    <div class="form-group">
-                        <label for="nombre-apellido">Nombre y Apellido</label>
-						<input id="nombre-apellido" class="form-control"  placeholder="Nombre y Apellido"><br>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email</label>
-                        <input type="text"class="form-control" id="email" placeholder="name@example.com">
-                      </div>
-                    <div class="form-group">
-	    				<label for="telefono">Teléfono:</label>
-						<input id="telefono" class="form-control" type="text" placeholder="5555-5555"><br>
-                    </div>
-                    <div class="form-group">
-                        <label for="comment">Comentario:</label>
-                        <textarea class="form-control" rows="8" id="comment"></textarea>
-                      </div>
-                    <div class="form-group">
-						<input id="enviar" type="submit" value="Enviar formulario">
-	
-						<input id="limpiar-formulario" type="reset" value="Limpiar formulario">
-                    </div>
-                </form>
-                <!--Fin formulario-->
-
-            </div>
+        
         </div>
+        <!--fin New header-->        
 
-
-        <!--</main>-->
-
-
-        <!-- Footer -->    
-        <footer class="footer text-center text-lg-start text-white" style="background-color: #0a141d" >
-            <!-- Grid container -->
-            <div class="container p-4 pb-0">
-                <!-- Section: Links -->
-                <section class="">
-                <!-- Grid row -->
-                <div class="row">
-                <!-- Grid column -->
-                <div class="footer-logo col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <a href="#"><img src="/assets/logo/Logo.png" class="img-thumbnail" alt="imagen logo"></a>
-                </div>
-                <!-- Fin Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" color="white"/>
-
-                <!-- Grid column -->
-                <div class="box col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">CONTACTO:</h6>
-                  <div class="contacto">
-                      <a href="#" role="button"><i class="fa-solid fa-phone"></i></a> 
-                      <h6 class="text-justify">5555-5555</h6>
-                      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                      <h6 class="text-justify">15 4 444 4444</h6>
-                      <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                      <h6 class="text-justify">complejo@gmail.com</h6>
-                  </div>
-                </div>
-                <!-- Fin Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" color="white"/>
-
-                <!-- Grid column -->
-                <div class="box col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">SIGUENOS EN:</h6>
-
-                    <!-- Facebook -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button" ><i class="fab fa-facebook-f"></i></a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-  
-                    <!-- Instagram -->
-                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button" ><i class="fab fa-instagram"></i></a>
-
-                </div>
+        <!--Main-->
+        <main class="main">
+            <div class="row">  
+                <section class="section-1 col-12 col-sm-12 col-md-12">
+    
+                    <div class="div-imagen">
+                        <img src="../assets/img/imgContacto.jpg" alt="img contacto">
+                    </div>
+    
+                </section>
+            </div>  
+    
+            <div class="row">
+                
+                <section class="section-2 col-12 col-sm-12 col-md-6 col-lg-6">
+                    <!-- apertura titulo -->
+                    <div class="row paddingT centrar">
+                        <div class="col-lg-12 col-xs-12" data-aos="fade-up">
+                            <h1 class="fontStyle">Formulario de contacto</h1>
+                        </div>
+                    </div>
+                    <!-- cierre titulo -->
+    
+                    <!--Formulario-->
+                    <form action="#" method="post">
+    
+                        <div class="form-group">
+                            <label for="nombre-apellido">Nombre y Apellido</label>
+                            <input id="nombre-apellido" class="form-control"  placeholder="Nombre y Apellido"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="text"class="form-control" id="email" placeholder="name@example.com">
+                          </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input id="telefono" class="form-control" type="text" placeholder="5555-5555"><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comentario:</label>
+                            <textarea class="form-control" rows="8" id="comment"></textarea>
+                          </div>
+                        <div class="form-group">
+                            <input id="enviar" type="submit" value="Enviar">
+        
+                            <input id="limpiar-formulario" type="reset" value="Limpiar">
+                        </div>
+                    </form>
+                    <!--Fin formulario-->
+    
+                </section>
             </div>
-            <!-- Fin Grid row -->
-            </section>
-            <!-- Fin Section: Links -->
-            </div>
-            <!-- Fin Grid container -->
+        </main>
 
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: #0a1a2a">
-                <small>&copy; 2022 <b>HDA</b> -Todos los derechos reservados.</small>
-            </div>
-            <!-- Fin Copyright -->
-        </footer>
+        <!--Fin main-->
+
+
+        <!-- Footer -->
+        <div class="row">
+            <footer class="footer text-center text-lg-start text-white" style="background-color: #0a141d" >
+                <!-- Grid container -->
+                <div class="container p-4 pb-0">
+                    <!-- Section: Links -->
+                    <section class="">
+                    <!-- Grid row -->
+                    <div class="row">
+                    <!-- Grid column -->
+                    <div class="footer-logo col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <a href="#"><img src="../assets/logo/Logo.png" class="img-thumbnail" alt="imagen logo"></a>
+                    </div>
+                    <!-- Fin Grid column -->
+    
+                    <hr class="w-100 clearfix d-md-none" color="white"/>
+    
+                    <!-- Grid column -->
+                    <div class="box col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
+                      <h6 class="text-uppercase mb-4 font-weight-bold">CONTACTO:</h6>
+                      <div class="contacto">
+                          <a href="#" role="button"><i class="fa-solid fa-phone"></i></a> 
+                          <h6 class="text-justify">5555-5555</h6>
+                          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                          <h6 class="text-justify">15 4 444 4444</h6>
+                          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                          <h6 class="text-justify">complejo@gmail.com</h6>
+                      </div>
+                    </div>
+                    <!-- Fin Grid column -->
+    
+                    <hr class="w-100 clearfix d-md-none" color="white"/>
+    
+                    <!-- Grid column -->
+                    <div class="box col-md-4 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">SIGUENOS EN:</h6>
+    
+                        <!-- Facebook -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button" ><i class="fab fa-facebook-f"></i></a>
+    
+                        <!-- Twitter -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+      
+                        <!-- Instagram -->
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button" ><i class="fab fa-instagram"></i></a>
+    
+                    </div>
+                </div>
+                <!-- Fin Grid row -->
+                </section>
+                <!-- Fin Section: Links -->
+                </div>
+                <!-- Fin Grid container -->
+    
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: #0a1a2a">
+                    <small>&copy; 2022 <b>HDA</b> -Todos los derechos reservados.</small>
+                </div>
+                <!-- Fin Copyright -->
+            </footer>
+        </div>
         <!-- Fin Footer -->
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
