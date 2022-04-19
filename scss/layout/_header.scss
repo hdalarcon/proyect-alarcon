@@ -1,0 +1,53 @@
+.header{
+    background-image: $color-fondo-header;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    a{    
+        color: $color-fuente-blanco;
+        text-decoration: none;
+        font-size: $fuente-menu-size;
+    }
+}
+
+.navbar-nav .nav-link{
+    color: $color-fuente-blanco !important;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navbar-brand img{
+    width: 200px;
+    height: 200px;
+    &:hover{
+        filter: grayscale(90%);
+    }
+    
+}
+
+
+.nav-item a:hover{
+    background: $color-hover;
+}
+
+
+.dropdown a{
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    font-size: $fuente-menu-size;
+
+    &:hover{
+        background: $color-hover;
+    }
+}
+
+.dropdown-menu{
+    background-color: $color-dropdown-menu;
+
+    a{
+        font-size: $fuente-dropdown-size;
+    }
+}
