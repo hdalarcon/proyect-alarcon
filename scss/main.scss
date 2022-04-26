@@ -2,7 +2,9 @@
 
 @import "base/normalize";
 @import "base/typography";
-@import "utilities/_variables";
+@import "utilities/variables";
+@import "base/mixin";
+@import "base/media.scss";
 @import "layout/header";
 @import "layout/cuerpo";
 @import "layout/footer";
