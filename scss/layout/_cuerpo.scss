@@ -1,0 +1,137 @@
+
+.body{
+    background-color: $color-de-fondo;
+}
+.main{
+    background-color: $color-de-fondo;
+}
+
+.div-bienvenidos{
+    color: $color-fuente-blanco;
+    display: inline;
+    text-align: center;
+    @include sizes($ancho-100-pixeles, $ancho-100-pixeles);
+    background-color: $color-div-bienvenido;
+    animation-name: animacion;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+
+    h1{
+        font-family: $fuente-principal;
+    }
+} 
+
+.section-1{
+    background-color: $color-de-fondo;
+
+    img{ 
+        @include sizes($ancho-total, $alto-50-pixeles*9);     
+    }
+    .cabanas{
+        display: inline;
+        text-align: left;
+        h1{
+            padding-left: 20px;
+        }
+    } 
+
+}
+
+
+.section-2{
+    background-color: $color-de-fondo;
+    display: inline;
+    padding: 10px 50px 20px 50px;
+    font-size: $fuente-section-2;
+        img{
+            @include sizes($ancho-imagen, $alto-imagen);
+        }
+
+        .form-control{
+            @include sizes($ancho-total, $alto-auto);
+            background-color: $color-campor-formulario;
+            border-radius: 20px;
+        }
+
+        .form-control--comentario{
+            @extend.form-control;
+            background-color:#f0c8a5;
+        }
+        
+}
+
+
+.section-3{
+    background-color: $color-de-fondo;
+    display: inline;
+    padding: 10px 50px 20px 50px;
+    font-size: $fuente-section-3;
+
+    .div-cabana-2{
+        img{
+            @include sizes($ancho-imagen, $alto-imagen);
+        }
+    }
+
+    .div-ubicacion{
+
+        padding-top: 100px;
+
+        img{
+            @include sizes(48px, 48px);
+            padding: 5px;
+        }
+        p{
+            font-size: $fuente-section-3-p;
+        }
+    }
+
+ 
+}
+
+.section-3-index{
+    display: flex;
+    padding-top: 100px;
+    justify-items: start;
+    align-items: flex-start;
+    @include sizes($ancho-auto,$alto-auto);
+}
+
+.section-4{
+    background-color: $color-de-fondo;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px 20px 10px 50px;
+
+    img{
+        @include sizes($ancho-imagen, $alto-imagen);
+    }
+    
+}
+
+
+@keyframes animacion {
+    0% {
+        width: 100px;
+        color: rgb(228, 226, 120);
+    }
+    25% {
+        width: 300px;
+    }
+    50% {
+        width: 200px;
+        background-color: rgb(255, 254, 250);
+    }
+    75% {
+        width: 300px;
+    }
+    100% {
+        width: 200px;
+        background-color:rgb(128, 19, 0);
+        color: rgb(255, 0, 21);
+    }
+ }

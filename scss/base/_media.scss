@@ -1,0 +1,164 @@
+/*MEDIA*/
+
+@media only screen and (max-width: 480px) {
+
+    .section-1 img{ 
+        @include sizes($ancho-total, $alto-100-pixeles*2);
+    }
+    
+    .section-2{
+        display: block;
+        padding: 10px 15px 10px 15px;
+        
+        .form-control{
+            @include sizes($ancho-total, $alto-auto);
+        }
+    
+        .form-control--comentario{
+            background-color: #f0c8a5;
+        }     
+    
+        .div-comodidades{
+            width: $ancho-total;
+            padding: 10px 20px 0 20px;
+            h2{
+                font-size: 1rem;
+            }
+            li{
+                font-size: 0.75rem;
+            }
+     
+        }
+    
+        .div-bienvenido{
+            p{
+                font-size: 0.75rem;
+            }
+        } 
+    
+        .div-cabana-1{
+            img{
+                @include sizes($ancho-100-pixeles*2, $alto-50-pixeles*3);
+            }
+        }
+    
+    
+    }
+    
+    .section-3{
+        display: block;
+        padding: 10px 15px 10px 15px;
+    
+        .div-cabana-2{
+            img{
+                @include sizes($ancho-100-pixeles*2,$alto-50-pixeles*3);
+            }
+    
+        } 
+    
+        .div-servicios{
+            padding: 10px 0 0 20px;
+            h2{
+                font-size: 1rem;
+            }
+            li{
+                font-size: 0.75rem;
+            }
+    
+        }
+    
+        .div-ubicacion{
+            display: flex;
+            flex-direction: column;
+            font-size: 0.75rem;
+            padding-top: 10px;
+        }
+
+    
+    }
+
+    .section-3-index{
+        display: block;
+    }
+    
+    .contacto{
+        display: block;
+    }
+    
+    .section-4{
+        .div-fotos{
+            padding: 10px 10px 10px 15px;
+            img {
+                @include sizes($ancho-100-pixeles*2,$alto-50-pixeles*3);
+            }
+        }
+    
+    }
+    
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }     
+}
+
+@media only screen and (max-width: 768px) {
+
+    .section-1{
+        img{ 
+            @include sizes($ancho-total, $alto-50-pixeles*7); 
+            }
+        }
+    
+    .section-2{
+        display: inline-block;
+        padding: 10px 15px 10px 15px;
+    
+        .form-control{
+            @include sizes($ancho-total, $alto-auto);
+        }
+        
+        .form-control--comentario{
+            @include sizes($ancho-total, $alto-auto);
+            background-color: #f0c8a5;
+        }
+        
+        .div-comodidades{
+            padding: 10px 0 0 50px;
+        }
+    
+        
+        .div-mapa{
+            iframe{
+                @include sizes($ancho-50-pixeles*11, $alto-50-pixeles*9);
+            }
+        }
+    
+    }
+    
+    .section-3{
+        display: inline-block;
+        padding: 10px 15px 10px 10px;
+    
+        .div-servicios{
+            padding: 10px 0 0 $ancho-50-pixeles;
+        }
+
+        .div-ubicacion{
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 0.75rem;               
+        }
+
+
+    }
+
+    .section-3-index{
+        display: block;
+    }
+    
+}
+
+/*FIN MEDIA*/

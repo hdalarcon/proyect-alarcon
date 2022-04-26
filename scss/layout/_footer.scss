@@ -44,8 +44,7 @@
     a{
         display: block;
         text-decoration: none;
-        width: 45px;
-        height: 45px;
+        @include sizes(45px, 45px);
         line-height: 45px;
         color: $color-fuente-blanco;
         margin-right: 10px;
@@ -76,10 +75,22 @@
 }
 
 .footer-logo img{
-    width: 200px;
-    height: 200px;
-    
+    @include sizes($ancho-100-pixeles*2, $ancho-100-pixeles*2);
+      
     &:hover{
         filter: grayscale(90%);
     }
 }
+
+$redes:(
+    facebook: $color-facebook,
+    twitter: $color-twitter,
+    instagram: $color-instagram
+);
+
+@each $red, $color in $redes{
+    .btn-#{$red}{
+        background-color: $color;
+    }
+}
+    

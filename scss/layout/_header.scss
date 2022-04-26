@@ -11,26 +11,31 @@
     }
 }
 
-.navbar-nav .nav-link{
+.nav-link{
     color: $color-fuente-blanco !important;
     padding: 0.5rem 1rem;
     transition: all 0.4s linear;
     border-radius: 5px;
 }
 
-.navbar-brand img{
-    width: 200px;
-    height: 200px;
-    &:hover{
-        filter: grayscale(90%);
+.navbar-brand{
+    img{
+        @include sizes($ancho-100-pixeles*2, $ancho-100-pixeles*2);
+        &:hover{
+            filter: grayscale(90%);
+        }
+        
     }
-    
-}
+} 
 
 
-.nav-item a:hover{
-    background: $color-hover;
-}
+.nav-item{
+    a{
+        &:hover{
+            background: $color-hover;
+        }
+    }
+} 
 
 
 .dropdown a{
