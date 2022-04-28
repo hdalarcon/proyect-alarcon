@@ -1,0 +1,14 @@
+//Ancho y altura
+@mixin sizes($width,$height) {
+    width: $width;
+    height: $height;
+}
+
+//Media queries
+@mixin media($medida) {
+    
+    @media screen and (max-width: $medida) {
+        @content;
+    }
+    
+}
