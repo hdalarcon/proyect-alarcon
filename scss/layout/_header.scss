@@ -20,7 +20,8 @@
 
 .navbar-brand{
     img{
-        @include sizes($ancho-100-pixeles*2, $ancho-100-pixeles*2);
+        object-fit: cover;
+        @include sizes(150px, 150px);
         &:hover{
             filter: grayscale(90%);
         }

@@ -321,8 +321,9 @@ template {
   border-radius: 5px; }
 
 .navbar-brand img {
-  width: 200px;
-  height: 200px; }
+  object-fit: cover;
+  width: 150px;
+  height: 150px; }
   .navbar-brand img:hover {
     filter: grayscale(90%); }
 
@@ -343,44 +344,37 @@ template {
     font-size: 1.3rem; }
 
 .body {
-  background-color: #F2D8A7; }
+  background-color: #F2D8A7;
+  font-display: auto; }
 
 .main {
-  background-color: #F2D8A7; }
+  background-color: #F2D8A7;
+  font-family: "Montserrat", sans-serif; }
 
-.div-bienvenidos {
-  color: white;
-  display: inline;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  background-color: #dd8a0e;
-  animation-name: animacion;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 4s;
-  animation-delay: 0.5s; }
-  .div-bienvenidos h1 {
-    font-family: "Montserrat", sans-serif; }
+.section-titulo {
+  background-color: #F2D8A7;
+  padding: 15px 10px 15px 10px; }
+  .section-titulo h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0; }
+    @media screen and (max-width: 480px) {
+      .section-titulo h1 {
+        font-size: 1.75rem; } }
 
 .section-1 {
   background-color: #F2D8A7;
   padding: 0; }
   .section-1 img {
+    object-fit: cover;
     width: 100%;
     height: 450px; }
     @media screen and (max-width: 480px) {
       .section-1 img {
         width: 100%;
         height: 200px; } }
-  .section-1 .cabanas {
-    display: inline;
-    text-align: left; }
-    .section-1 .cabanas h1 {
-      padding-left: 20px; }
-  @media screen and (max-width: 480px) {
-    .section-1 h1 {
-      font-size: 1.75rem; } }
   @media screen and (max-width: 480px) {
     .section-1 h2 {
       font-size: 1.50rem; } }
@@ -390,25 +384,47 @@ template {
 
 .section-2 {
   background-color: #F2D8A7;
-  display: inline;
-  padding: 10px 50px 20px 50px;
+  padding: 10px 75px 20px 50px;
   font-size: 1.5rem; }
+  @media screen and (max-width: 768px) {
+    .section-2 {
+      padding: 10px 50px 20px 50px; } }
   .section-2 img {
+    object-fit: cover;
+    margin: 5px;
     width: 250px;
-    height: 200px; }
-  .section-2 .form-control, .section-2 .form-control--comentario {
-    width: 100%;
-    height: auto;
-    background-color: #ebb956;
-    border-radius: 20px; }
-  .section-2 .form-control--comentario {
-    background-color: #f0c8a5; }
+    height: 200px;
+    box-shadow: 5px 8px 12px black;
+    transition: all 0.3s ease-in-out; }
+    .section-2 img:hover {
+      transform: scale(1.1);
+      box-shadow: 13px 15px 37px black; }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+      .section-2 img {
+        width: 100%;
+        height: 200px; } }
+  .section-2 .lista-comodidades {
+    padding-left: 100px; }
+    @media screen and (max-width: 480px) {
+      .section-2 .lista-comodidades {
+        padding-left: 0; } }
   @media screen and (max-width: 480px) {
     .section-2 h1 {
       font-size: 1.75rem; } }
-  @media screen and (max-width: 480px) {
-    .section-2 h2 {
-      font-size: 1.50rem; } }
+  .section-2 .div-bienvenido h2 {
+    padding-left: 0; }
+  .section-2 .div-cabana-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .section-2 h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    padding-left: 75px; }
+    @media screen and (max-width: 480px) {
+      .section-2 h2 {
+        padding-left: 0;
+        font-size: 1.50rem; } }
   @media screen and (max-width: 480px) {
     .section-2 p {
       font-size: 1rem; } }
@@ -416,25 +432,81 @@ template {
     .section-2 li {
       font-size: 1rem; } }
 
+.section-contacto {
+  background-color: #F2D8A7;
+  padding: 20px 200px 20px 200px; }
+  @media screen and (max-width: 768px) {
+    .section-contacto {
+      padding: 20px 50px 20px 50px; } }
+  .section-contacto .form-control, .section-contacto .form-control--comentario {
+    width: 100%;
+    height: auto;
+    background-color: #ebb956;
+    border-radius: 10px; }
+  .section-contacto .form-control--comentario {
+    background-color: #f0c8a5; }
+  .section-contacto h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0; }
+    @media screen and (max-width: 480px) {
+      .section-contacto h1 {
+        font-size: 1.75rem; } }
+
+@media screen and (max-width: 768px) {
+  .section-2-ubicacion {
+    padding: 10px 10px 20px 10px; } }
+
 .section-3 {
   background-color: #F2D8A7;
   display: inline;
-  padding: 10px 50px 20px 50px;
+  padding: 10px 50px 20px 75px;
   font-size: 1.5rem; }
-  .section-3 .div-cabana-2 img {
+  @media screen and (max-width: 768px) {
+    .section-3 {
+      padding: 10px 50px 20px 50px; } }
+  .section-3 img {
+    object-fit: cover;
+    margin: 5px;
     width: 250px;
-    height: 200px; }
-  .section-3 .div-ubicacion {
-    padding-top: 100px; }
-    .section-3 .div-ubicacion img {
-      width: 48px;
-      height: 48px;
-      padding: 5px; }
-    .section-3 .div-ubicacion p {
-      font-size: 1rem; }
-    @media screen and (max-width: 768px) {
-      .section-3 .div-ubicacion {
-        padding-top: 10px; } }
+    height: 200px;
+    box-shadow: 5px 8px 12px black;
+    transition: all 0.3s ease-in-out; }
+    .section-3 img:hover {
+      transform: scale(1.1);
+      box-shadow: 13px 15px 37px black; }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+      .section-3 img {
+        width: 100%;
+        height: 200px; } }
+  .section-3 .lista-servicios {
+    padding-left: 100px; }
+    @media screen and (max-width: 480px) {
+      .section-3 .lista-servicios {
+        padding-left: 0; } }
+  .section-3 .div-cabana-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .section-3 .div-ubicacion img {
+    object-fit: cover;
+    width: 48px;
+    height: 48px;
+    padding: 5px; }
+  .section-3 .div-ubicacion p {
+    font-size: 1rem; }
+  @media screen and (max-width: 768px) {
+    .section-3 .div-ubicacion {
+      padding-top: 10px; } }
+  .section-3 h2 {
+    padding-left: 75px;
+    font-weight: bolder; }
+    @media screen and (max-width: 480px) {
+      .section-3 h2 {
+        padding-left: 0;
+        font-size: 1.50rem; } }
   @media screen and (max-width: 480px) {
     .section-3 p {
       font-size: 1rem; } }
@@ -443,15 +515,31 @@ template {
       font-size: 1rem; } }
 
 .section-3-index {
-  display: flex;
-  padding-top: 100px;
-  justify-items: start;
-  align-items: flex-start;
-  width: auto;
-  height: auto; }
+  display: block; }
   @media screen and (max-width: 768px) {
     .section-3-index {
       padding-top: 10px; } }
+
+.section-cabanas {
+  background-color: #F2D8A7;
+  padding: 20px 50px 20px 50px; }
+  @media screen and (max-width: 480px) {
+    .section-cabanas {
+      padding: 10px 20px 20px 20px; } }
+
+.video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative; }
+
+.video iframe, .video object, .video embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
 
 .section-4 {
   background-color: #F2D8A7;
@@ -459,26 +547,37 @@ template {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  padding: 10px 20px 10px 50px; }
+  padding: 10px 20px 10px 10px; }
+  @media screen and (max-width: 480px) {
+    .section-4 {
+      padding: 10px 20px 10px 20px; } }
+  .section-4 .div-fotos {
+    display: flex;
+    flex-wrap: wrap; }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+      .section-4 .div-fotos {
+        display: block; } }
   .section-4 img {
-    width: 250px;
+    object-fit: cover;
+    box-shadow: 5px 8px 12px black;
+    transition: all 0.3s ease-in-out;
+    width: 20%;
     height: 200px; }
-
-@keyframes animacion {
-  0% {
-    width: 100px;
-    color: #e4e278; }
-  25% {
-    width: 300px; }
-  50% {
-    width: 200px;
-    background-color: #fffefa; }
-  75% {
-    width: 300px; }
-  100% {
-    width: 200px;
-    background-color: #801300;
-    color: #ff0015; } }
+    .section-4 img:hover {
+      transform: scale(1.1);
+      box-shadow: 13px 15px 37px black; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .section-4 img {
+        width: 25%;
+        height: 200px; } }
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+      .section-4 img {
+        width: 50%;
+        height: 200px; } }
+    @media only screen and (min-width: 240px) and (max-width: 480px) {
+      .section-4 img {
+        width: 100%;
+        height: 200px; } }
 
 .footer {
   width: 100%;
@@ -525,7 +624,8 @@ template {
   .contacto p {
     color: white;
     font-size: 1.5rem; }
-  .contacto h3 {
+  .contacto h2 {
+    margin: 0;
     color: white;
     font-size: 16px; }
 
@@ -538,6 +638,7 @@ template {
     font-size: 15px; }
 
 .footer-logo img {
+  object-fit: cover;
   width: 200px;
   height: 200px; }
   .footer-logo img:hover {

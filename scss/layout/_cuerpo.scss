@@ -1,53 +1,46 @@
 
 .body{
     background-color: $color-de-fondo;
+    font-display: auto;
 }
 .main{
     background-color: $color-de-fondo;
+    font-family: $fuente-principal;
 }
 
-.div-bienvenidos{
-    color: $color-fuente-blanco;
-    display: inline;
-    text-align: center;
-    @include sizes($ancho-100-pixeles, $ancho-100-pixeles);
-    background-color: $color-div-bienvenido;
-    animation-name: animacion;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 4s;
-    animation-delay: 0.5s;
-
+.section-titulo{
+    background-color: $color-de-fondo;
+    padding: 15px 10px 15px 10px;
     h1{
         font-family: $fuente-principal;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0;
+
+        @include media(480px){
+            font-size: 1.75rem;
+        };
+        
     }
-} 
+
+}
 
 .section-1{
     background-color: $color-de-fondo;
     padding: 0;
+
     img{ 
+        object-fit: cover;
         @include sizes($ancho-total, $alto-50-pixeles*9);     
 
         @include media(480px){
             @include sizes($ancho-total, $alto-100-pixeles*2);
         };
     }
-    .cabanas{
-        display: inline;
-        text-align: left;
-        h1{
-            padding-left: 20px;
-        }
-    } 
-
-    h1{
-        @include media(480px){
-            font-size: 1.75rem;
-        };
-    }
 
     h2{
+        
         @include media(480px){
             font-size: 1.50rem;
         };
@@ -65,23 +58,39 @@
 
 .section-2{
     background-color: $color-de-fondo;
-    display: inline;
-    padding: 10px 50px 20px 50px;
+    padding: 10px 75px 20px 50px;
     font-size: $fuente-section-2;
-        
+
+   @include media(768px){
+        padding: 10px 50px 20px 50px;
+    };
+
     img{
+        object-fit: cover;
+        margin: 5px;
         @include sizes($ancho-imagen, $alto-imagen);
+
+        box-shadow: 5px 8px 12px black;
+        transition: all 0.3s ease-in-out;
+
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 13px 15px 37px black;
+        }
+
+        
+        @include media-2(240px,480px){
+            @include sizes(100%, $alto-imagen);
+        }
     }
 
-    .form-control{
-        @include sizes($ancho-total, $alto-auto);
-        background-color: $color-campor-formulario;
-        border-radius: 20px;
-    }
+    .lista-comodidades{
+        padding-left: 100px;
 
-    .form-control--comentario{
-        @extend.form-control;
-        background-color:#f0c8a5;
+        @include media(480px){
+            padding-left: 0;
+        };
     }
 
     h1{
@@ -89,9 +98,27 @@
             font-size: 1.75rem;
         };
     }
+
+    .div-bienvenido{
+        h2{
+            padding-left: 0;
+        }
+        
+    }
+
+    .div-cabana-1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
         
     h2{
+        font-family: $fuente-principal;
+        font-weight: bolder;
+        padding-left: 75px;
+
         @include media(480px){
+            padding-left: 0;
             font-size: 1.50rem;
         };
     }
@@ -110,24 +137,95 @@
 
 }
 
+.section-contacto{
+
+    background-color: $color-de-fondo;
+    padding: 20px 200px 20px 200px;
+
+    @include media(768px){
+        padding: 20px 50px 20px 50px;
+    } 
+
+    .form-control{
+        @include sizes($ancho-total, $alto-auto);
+        background-color: $color-campor-formulario;
+        border-radius: 10px;
+    }
+
+    .form-control--comentario{
+        @extend.form-control;
+        background-color:#f0c8a5;
+    }
+
+    h1{
+        font-family: $fuente-principal;
+        font-weight: bolder;
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0;
+
+        @include media(480px){
+            font-size: 1.75rem;
+        };
+        
+    }
+}
+
+.section-2-ubicacion{
+    @include media(768px){
+        padding: 10px 10px 20px 10px;
+    };
+}
+
 
 .section-3{
     background-color: $color-de-fondo;
     display: inline;
-    padding: 10px 50px 20px 50px;
+    padding: 10px 50px 20px 75px;
     font-size: $fuente-section-3;
 
-    .div-cabana-2{
-        img{
-            @include sizes($ancho-imagen, $alto-imagen);
+    @include media(768px){
+        padding: 10px 50px 20px 50px;
+    };
+
+    
+    img{
+        object-fit: cover;
+        margin: 5px;
+        @include sizes($ancho-imagen, $alto-imagen);
+
+        box-shadow: 5px 8px 12px black;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 13px 15px 37px black;
         }
+
+        
+        @include media-2(240px,480px){
+            @include sizes(100%, $alto-imagen);
+        }
+    }
+    
+    .lista-servicios{
+        padding-left: 100px;
+
+        @include media(480px){
+            padding-left: 0;
+        };
+    }
+
+    .div-cabana-2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .div-ubicacion{
 
-        padding-top: 100px;
-
         img{
+            object-fit: cover;
             @include sizes(48px, 48px);
             padding: 5px;
         }
@@ -139,6 +237,15 @@
             padding-top: 10px;
         };
     
+    }
+
+    h2{
+        padding-left: 75px;
+        font-weight: bolder;
+        @include media(480px){
+            padding-left: 0;
+            font-size: 1.50rem;
+        };
     }
 
     p{
@@ -157,16 +264,37 @@
 }
 
 .section-3-index{
-    display: flex;
-    padding-top: 100px;
-    justify-items: start;
-    align-items: flex-start;
-    @include sizes($ancho-auto,$alto-auto);
-
+    display: block;
     @include media(768px){
         padding-top: 10px;
     };
 }
+
+.section-cabanas{
+
+    background-color: $color-de-fondo;
+    padding: 20px 50px 20px 50px;
+
+    @include media(480px){
+        padding: 10px 20px 20px 20px;
+    };
+}
+
+.video{
+    height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+
+.video iframe, .video object, .video embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	}
 
 .section-4{
     background-color: $color-de-fondo;
@@ -174,34 +302,46 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    padding: 10px 20px 10px 50px;
+    padding: 10px 20px 10px 10px;
+
+    @include media(480px){
+        padding: 10px 20px 10px 20px;
+    };
+
+    .div-fotos{
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-2(240px,480px){
+            display: block;
+        }
+    }
 
     img{
-        @include sizes($ancho-imagen, $alto-imagen);
+        object-fit: cover;
+        box-shadow: 5px 8px 12px black;
+        transition: all 0.3s ease-in-out;
+        @include sizes(20%, $alto-imagen);
+
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 13px 15px 37px black;
+        }
+
+        @include media-2(768px,1024px){
+            @include sizes(25%, $alto-imagen);
+        }
+
+        @include media-2(481px,767px){
+            @include sizes(50%, $alto-imagen);
+        }
+
+        @include media-2(240px,480px){
+            @include sizes(100%, $alto-imagen);
+        }
     }
     
 }
 
 
-@keyframes animacion {
-    0% {
-        width: 100px;
-        color: rgb(228, 226, 120);
-    }
-    25% {
-        width: 300px;
-    }
-    50% {
-        width: 200px;
-        background-color: rgb(255, 254, 250);
-    }
-    75% {
-        width: 300px;
-    }
-    100% {
-        width: 200px;
-        background-color:rgb(128, 19, 0);
-        color: rgb(255, 0, 21);
-    }
- }
 
